@@ -1,0 +1,91 @@
+exit
+
+---
+
+entire status
+
+---
+
+I completed the stakeholder interview for Project A. The original transcript is in interviews/. Please read the assignment and the interview transcript, identify the requirements and business rules established during the interview, and tell me what you think the implementation needs to do. Do not modify any files yet.
+
+---
+
+<pasted_content id="9ce9">
+# Project A — Daily Financial Health and Budget Brief — Learner assignment
+
+## Scenario
+
+Quillhaven Academy's Finance and Operations Manager needs a reliable daily financial brief. Preparing it from separate records takes time and can leave uncertainty hidden in a polished report.
+
+## Your task
+
+Build an Agent Skills-compliant skill named `daily-financial-health-brief` that another operator can run to produce the manager's requested brief from current business sources. Keep the work read-only and the brief a draft for human review; do not edit a source system or perform a financial action.
+
+## Deliverables
+
+**Interview records — `interviews/*.md`.** Include the original Work Sim Markdown export for every interview session, with its session metadata and complete participant-visible messages. Keep one final complete export per session without rewriting or summarizing it. Commit and push these files in the submitted code revision and ensure the facilitator can read them. Coding-session capture remains a separate requirement. If the export is unavailable, contact the facilitator; do not manufacture a replacement.
+
+Include these paths in your repository:
+
+- `daily-financial-health-brief/SKILL.md` with valid `name` and `description` frontmatter;
+- an executable implementation under `daily-financial-health-brief/scripts/`;
+- focused operating knowledge under `daily-financial-health-brief/references/`;
+- `deliverables/normalized/transactions.csv`;
+- `deliverables/normalized/budget.csv`;
+- `deliverables/normalized/revenue.csv`; and
+- `deliverables/report.md`: the manager's requested brief, with traceable findings, source metadata and unresolved items.
+
+Required CSV columns:
+
+- `transactions.csv`: `transaction_id`, `date`, `account`, `category`, `description`, `amount`, `currency`, `status`, `source`, `source_version`, `amount_status`;
+- `budget.csv`: `period`, `category`, `budget_amount`, `currency`, `owner`, `review_rule`, `source`, `source_version`; and
+- `revenue.csv`: `date`, `source`, `metric`, `value`, `currency`, `source_version`.
+
+Preserve every recognized source row. Extra source columns do not have to appear in normalized output unless they carry business meaning needed for traceability or review.
+
+Required `report.md` figures. Report each of these as an exact number carrying its own label and its sign, not as a rounded figure or as a description of the direction of travel: the reporting date's posted total, its pending-confirmed total and its disputed-confirmed total; the prior business day's posted total; and the change between those two posted totals. The interview establishes what each figure means, which rows it draws on and how it is derived.
+
+Document one programmatic end-to-end command, its runtime and dependencies. Use relative paths from the skill root, validate inputs before producing usable outputs, support deterministic reruns, and avoid manual per-row processing or hard-coded expected answers. Identify source roles from field meaning, not filenames or column positions.
+
+Accept the three interview-disclosed Google Sheets URLs as runtime inputs. Every run must freshly read all three through their view-only access. Bundled, manually downloaded or previously cached CSVs cannot be the primary input. Before publishing outputs, print each source URL or spreadsheet identity, sheet/tab identity, fetch timestamp, source version and fetched row count for the Entire transcript, and record the same metadata in `report.md`. If a source cannot be fetched or validated, fail safely without silently reusing an older copy. A failed run must also not leave an earlier run's deliverables at the required output paths where they can be read as current: remove, invalidate or unmistakably mark them as stale or failed, because not overwriting them is not enough. Request clarification for incomplete or ambiguous evidence; do not invent values.
+
+## Interview
+
+Use the starter README to create your working repository and prepare session capture. Interview the Finance and Operations Manager to establish the reporting request, business rules, source meanings, unresolved cases and review responsibilities, and obtain relevant source access. Apply that knowledge in your implementation; the stakeholder does not design the automation for you.
+
+**Interview rule.** You conduct the stakeholder interview yourself, and the questions are yours. Do not connect a coding agent or any other AI to the interview to run, script, or automate it. The interview transcript is assessed together with the code; a project whose interview was run by an agent is not scored.
+</pasted_content id="9ce9">
+
+---
+
+well inspect the three sheets first before i ask questions about the currency. If they only have USD then maybe we shouldn't worry about it
+
+---
+
+okay you will now see that there is a second interview with the rest of your questions.
+
+---
+
+"The relevant baseline" isn't defined. The interviews say 10% of the relevant baseline but never name the baseline. The sensible candidate is the category's monthly budget_amount, with the variance being month-to-date posted spend minus that budget. Alternatives are a prorated budget for the elapsed days, or the prior-period total. The monthly budget is the only baseline the sources actually contain, so I'd use it. I would state the choice in references/, and in report.md say it is an assumption pending Finance's confirmation, instead of presenting it as established. If you'd like it confirmed, that's the one question worth a third interview, since it changes which categories get flagged.
+
+is this the only question you have. Let me know everything you want to know now so i'm not going into the meeting with just one question
+
+---
+
+Okay now you will see the third interview with the answers to all of your questions.
+
+---
+
+Yes, go ahead and start the build. Before making changes, review the assignment, README, interview transcripts, and current repository structure one more time. Implement the project according to the confirmed requirements, and make sure all required deliverables and acceptance criteria are covered.
+
+---
+
+Before committing or pushing anything, perform a final pre-submission audit. Compare the current repository against every requirement in the Project A assignment and README. Specifically validate the Agent Skills SKILL.md frontmatter/spec requirements, required files and CSV columns, report figures, source metadata, fresh-read behavior, failure behavior, deterministic reruns, read-only boundaries, and interview exports. Also check that the Entire coding session has been captured correctly. Do not commit or push yet. Give me a list of anything that still needs to be fixed or verified.
+
+---
+
+fix 1–4 and rerun now, without committing or pushing
+
+---
+
+Okay I spoke to the facilitator and he said it is fine, so that is resolved. Before committing and pushing, can you check whether pushing enable-entire to origin will make the full project and Entire history visible to the facilitator? Don't change branches or push anything yet.

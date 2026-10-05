@@ -1,0 +1,109 @@
+{
+  "cli_version": "0.11.3",
+  "checkpoint_id": "01M4511FCKCKYR2K9E9YAQTQH9",
+  "session_id": "58b1e737-242f-40bd-86bd-e8447321682e",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-05T03:17:12.662755Z",
+  "branch": "enable-entire",
+  "checkpoints_count": 13,
+  "save_step_count": 4,
+  "files_touched": [
+    ".gitignore",
+    "README.md",
+    "daily-financial-health-brief/SKILL.md",
+    "daily-financial-health-brief/references/business-rules.md",
+    "daily-financial-health-brief/references/report-structure.md",
+    "daily-financial-health-brief/references/sources-and-validation.md",
+    "daily-financial-health-brief/scripts/compute.py",
+    "daily-financial-health-brief/scripts/render.py",
+    "daily-financial-health-brief/scripts/run.py",
+    "daily-financial-health-brief/scripts/sources.py",
+    "daily-financial-health-brief/tests/test_brief.py",
+    "deliverables/normalized/budget.csv",
+    "deliverables/normalized/revenue.csv",
+    "deliverables/normalized/transactions.csv",
+    "deliverables/report.md"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-5-5",
+  "turn_id": "269baa5b6b08",
+  "checkpoint_transcript_start": 74,
+  "transcript_lines_at_start": 74,
+  "compact_transcript_start": 13,
+  "token_usage": {
+    "input_tokens": 114,
+    "cache_creation_tokens": 192022,
+    "cache_read_tokens": 5762788,
+    "output_tokens": 89477,
+    "api_call_count": 57
+  },
+  "session_metrics": {
+    "turn_count": 14
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-05T03:17:12.616343Z",
+    "agent_lines": 1563,
+    "agent_removed": 0,
+    "human_added": 0,
+    "human_modified": 9,
+    "human_removed": 0,
+    "total_committed": 1569,
+    "total_lines_changed": 1572,
+    "agent_percentage": 99.42748091603053,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 369,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "interviews/interview-r62mbg-20261004-2321.md": 165,
+        "interviews/interview-r62mbg-20261005-0057.md": 53,
+        "interviews/interview-r62mbg-20261005-0141.md": 151
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1854,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 1854,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 3,
+      "user_lines_removed": 3,
+      "agent_lines_added": 1944,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "deliverables/report.md": 3
+      },
+      "user_removed_per_file": {
+        "deliverables/report.md": 3
+      }
+    },
+    {
+      "checkpoint_number": 5,
+      "user_lines_added": 3,
+      "user_lines_removed": 3,
+      "agent_lines_added": 1944,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "deliverables/report.md": 3
+      },
+      "user_removed_per_file": {
+        "deliverables/report.md": 3
+      }
+    }
+  ]
+}
